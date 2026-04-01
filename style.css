@@ -1,0 +1,1772 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/Poppins-Light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MyFont', 'fonts/Poppins-Light.ttf';
+}
+
+.navbar {
+  width: 100%;
+  background-color:#ff6f61;
+}
+
+.navbar-brand{
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-link{
+  color: white;
+  
+}
+.nav-link:hover{
+  color:#333;
+}
+
+
+/* Mega dropdown default style */
+.dropdown-fullscreen {
+  position: absolute;
+  top: 100%;
+  /*left: 50%;  move to center */
+  transform: translateX(-50%); /* adjust from center */
+  /*width: 90vw;  responsive width - adjust as needed */
+  max-width: 1200px; /* optional max width */
+  background-color: #f8f9fa;
+  display: none;
+  padding: 2rem 1rem;
+  z-index: 999;
+  border-top: 2px solid #dee2e6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  min-height: 300px;
+  align-items: stretch;
+}
+
+/* Desktop: Show on hover and flex layout */
+@media (min-width: 992px) {
+  .nav-item:hover .dropdown-fullscreen {
+    display: flex;
+    flex-direction: row; /* ensure horizontal layout */
+    justify-content: center;
+    gap: 2rem; /* space between columns */
+  }
+}
+
+/* Mobile: override for toggle */
+@media (max-width: 991px) {
+  .dropdown-fullscreen {
+    position: static;                /* ✅ Remove absolute on mobile */
+    left: auto;                      /* ✅ Reset left */
+    transform: none;                 /* ✅ Cancel translate */
+    width: 100%;                     /* ✅ Full width on mobile */
+    display: none;
+    flex-direction: column;
+    box-shadow: none;
+    border-top: none;
+    padding: 1rem 0;
+  }
+
+  .dropdown-fullscreen.show {
+    display: flex !important;
+  }
+}
+
+/* Common styling */
+.dropdown-fullscreen > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.dropdown-fullscreen h5 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.dropdown-fullscreen ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.dropdown-fullscreen ul li {
+  margin-bottom: 0.5rem;
+}
+
+.dropdown-fullscreen ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown-fullscreen ul li a:hover {
+  color: #ff6f61;
+}
+
+/* Section about */
+
+.about-main {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.about-main h1 {
+  font-weight: bolder;
+  color: #17252a;
+  font-size: 37px;
+  font-family: serif;
+
+}
+
+.about-main h4 {
+  font-size: 19.5px;
+  font-weight: bold;
+ color: #333;
+  margin-top: 12px;
+}
+
+.about-main p {
+  font-size: 14.5px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 37px;
+
+}
+
+.about-conatiner p {
+  font-size: 13.5px;
+  color: #333;
+  margin-right: 50px;
+}
+
+.about-content img {
+  width: 100%;
+  height: 250px;
+}
+
+@media (max-width: 768px){
+  .about-content{
+    flex-direction: column;
+     align-items: center;
+  }
+
+  .list{
+  flex-direction: column;
+  align-items: center;
+  }
+  .about-img{
+    width: 90%;
+    align-items: center;
+  }
+}
+
+
+/* SECTON PRODUCT CARD   */
+
+.paining-content {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.paining-content h2 {
+  font-weight: bolder;
+  color: #333;
+  font-size: 37px;
+  font-family: serif;
+}
+
+.paining-content p {
+  font-size: 14.5px;
+}
+
+.paining-content h1 {
+  font-weight: bolder;
+  color:#333;
+  font-size: 24px;
+  margin-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/*************** Product card section 1  Abstract Paining */
+
+.product-card1 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card1 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card1 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card1 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 500px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card1{
+    width: 100%;
+  }
+}
+
+
+/* Modal Style */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-content h2 {
+  font-size: 25px;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.modal-content p {
+  margin-top: 5px;
+  font-size: 14px;
+
+}
+
+.modal-content p:nth-of-type(2){
+  margin-top: -8px;
+}
+
+.modal-content p:nth-of-type(3){
+  margin-top: -8px;
+}
+.modal-btn {
+  background-color: transparent;
+  border: 3px solid #00d7c3;
+  border-radius: 50px;
+  padding: 5px;
+  -webkit-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+  color: #00d7c3;
+}
+
+.modal-btn:hover {
+  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+  border: 3px solid #00d7c3;
+}
+
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/**************************SECTION 2 LANDSCAPE  */  /* Product card section */
+
+.product-card2 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card2 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card2 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card2 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card2{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card2{
+    width: 100%;
+  }
+}
+
+/**************************SECTION 3 Flower */  /* Product card section */
+
+.product-card3 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card3 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card3 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card3 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card3{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card3{
+    width: 100%;
+  }
+}
+
+/**************************SECTION 4 Nature */  /* Product card section */
+
+.product-card4 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card4 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card4 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card4 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card4{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card4{
+    width: 100%;
+  }
+}
+/**************************SECTION 5 Figurative */  /* Product card section */
+
+.product-card5 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card5 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card5 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card5 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card5{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card5{
+    width: 100%;
+  }
+}
+
+/**************************SECTION Reliious 6 */  /* Product card section */
+
+.product-card6 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card6 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card6 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card6 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card6{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card6{
+    width: 100%;
+  }
+}
+
+
+
+/* **************************Section 7 Acrylic ***************************** */
+
+
+.product-card7 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card7 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card7 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card7 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card7{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card7{
+    width: 100%;
+  }
+}
+
+/* **************************Section 8 Canvas ***************************** */
+
+
+.product-card8 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card8 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card8 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card8 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card8{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card8{
+    width: 100%;
+  }
+}
+
+/* **************************Section 9 Paper ***************************** */
+
+
+.product-card9 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card9 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card9 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card9 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card9{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card9{
+    width: 100%;
+  }
+}
+
+/* **************************Section 10 OPH ***************************** */
+.product-card10 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card10 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card10 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card10 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card10{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card10{
+    width: 100%;
+  }
+}
+
+/* **************************Section 11 Fabric ***************************** */
+
+
+.product-card11 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card11 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card11 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card11 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card11{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card11{
+    width: 100%;
+  }
+}
+
+/* **************************Section 12 Type of color ***************************** */
+                       /* ACRYLIC COLOR */
+
+.product-card12 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card12 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card12 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card12 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card12{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card12{
+    width: 100%;
+  }
+}
+
+/*************************** Section 13 Type of BALL PEN color ***************************** */
+
+.product-card13 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card13 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card13 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card13 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card13{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card13{
+    width: 100%;
+  }
+}
+
+/*************************** Section 14 Type of Charcoal color ***************************** */
+
+.product-card14 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card14 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card14 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card14 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card14{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card14{
+    width: 100%;
+  }
+}
+
+/*************************** Section 15 Type of Oil color ***************************** */
+
+.product-card15 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card15 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card15 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card15 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card15{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card15{
+    width: 100%;
+  }
+}
+
+/*************************** Section 16 Type of Water color ***************************** */
+
+.product-card16 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card16 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card16 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card16 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card16{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card16{
+    width: 100%;
+  }
+}
+
+/*************************** Section 17 Type of Poster color ***************************** */
+
+.product-card17 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card17 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card17 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card17 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card17{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card17{
+    width: 100%;
+  }
+}
+
+/*************************** Section 18 Type of ENAMEL COLOUR ***************************** */
+
+.product-card18 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card18 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card18 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card18 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card18{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card18{
+    width: 100%;
+  }
+}
+
+/*************************** Section 19 Type of INK COLOUR ***************************** */
+
+.product-card19 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.card19 {
+  border: 1px solid gray;
+  width: 23%;
+  border-radius: 1px;
+  text-align: center;
+  box-shadow: 3px 9px 5px rgba(0, 0, 0, 0.4);
+}
+
+.card19 img {
+  max-width: 100%;
+  height: 200px;
+}
+
+.card19 h3 {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  margin-top: 17px;
+}
+
+.card-btn {
+  color: #fff;
+  border: none;
+  margin-top: 5px;
+  background-image: -webkit-linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-image: linear-gradient(30deg, #c266d3 50%, transparent 50%);
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-position: 0%;
+  -webkit-transition: background 300ms ease-in-out;
+  transition: background 300ms ease-in-out;
+}
+
+.card-btn:hover {
+  background-position: 100%;
+  color: #c266d3;
+}
+
+@media (max-width: 768px){
+  .product-card19{
+    flex-direction: column;
+    align-items: center;
+  }
+  .card19{
+    width: 100%;
+  }
+}
+
+
+/************************* SECTION GALLERY */
+
+  #Gallery {
+    max-width: 900px;
+    height:520px;
+    margin: 0 auto;
+    margin-top: 35px;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   }
+
+  #Gallery h2 {
+    font-size:45px;
+   
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+      color: #333;
+    }
+
+  #Gallery p {
+     font-size: 13px;
+     color: #333;
+    }
+    
+  .gallery-home1{
+    display: flex;
+    justify-content:center;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  .gallery-home1 img{
+    width: 25%;
+    height:200px;
+     transition: transform 0.3s ease;
+  }
+
+  .gallery-home2{
+    margin-top: 10px;
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+  }
+  .gallery-home2 img{
+    width: 25%;
+    height:170px;
+     transition: transform 0.5s ease;
+  }
+
+  .gallery-home1 img:hover {
+      transform: scale(1.04);
+    } 
+   .gallery-home2 img:hover {
+      transform: scale(1.04);
+    } 
+
+@media (max-width: 768px){
+  .gallery-home1{
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery-home1 img{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px){
+  .gallery-home2{
+    flex-direction: column;
+    align-items: center;
+  }
+  
+   #Gallery{
+  height: 1350px;
+ }
+  .gallery-home2 img{
+    width: 100%;
+  }
+}
+
+
+    /* SECTION CONTACT US */
+
+  #contact-section {
+      max-width: 1100px;
+      height:580px;
+      margin: 0 auto;
+      margin-top: 27px;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #contact-section h2 {
+      text-align: center;
+      font-size:45px;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      color: #333;
+    }
+
+    #contact-section p.quote {
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+
+  .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+    .contact-left {
+      flex: 1 1 45%;
+     margin-left:60px;
+    }
+
+    .contact-left p {
+      font-size: 13px;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .contact-home {
+      margin-bottom:15px;
+      font-size: 14px;
+    }
+
+    .contact-home b {
+      color:#ff6f61;
+    }
+
+    .contact-right {
+      flex: 1 1 45%;
+    }
+
+    .contact-right h3 {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 75%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-left: 55px;
+    }
+
+    .contact-form textarea {
+      height: 100px;
+      resize: vertical;
+    }
+
+    .contact-form button {
+      background-color: #111;
+      color: #fff;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 75%;
+      margin-left:55px;
+      margin-top: -10px;
+    }
+
+    .contact-form button:hover {
+      background-color: #444;
+    }
+
+  @media (max-width: 768px){
+  .contact-container{
+    flex-direction: column;
+     align-items: center;
+    }
+
+ #contact-section{
+  height: 940px;
+ }
+
+  .contact-right{
+    width: 90%;
+    align-items: center;
+  }
+}
+
+    /* **************SECTION FAQ */
+
+ .faq-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+
+    .faq-container h1{
+      text-align: center;
+      font-size: 29px;
+      font-weight: bold;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+   .faq-container p{
+    text-align: center;
+    font-size: 14px;
+  }
+
+    .faq-item {
+      align-items: center;
+      border: 1px solid #ff6f61;
+      padding: 15px 20px;
+      border-radius: 5px;
+      background-color: #fff;
+      transition: all 0.3s ease;
+      }
+
+    .faq-item:hover {
+      background-color: #fdf4e7;
+    }
+
+    .faq-question {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .faq-answer {
+      display: none;
+       font-size: 14px;
+     margin-top:10px;
+      color:#333;
+     }
+
+
+  /* side map */
+
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; 
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px; 
+
+}
+
+.map-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  border: 0;
+}
+
+
+  /* FOOTER */
+
+.footer {
+  width: 100%;
+  background-color: #ff6f61;
+  color: white;
+  padding: 40px 20px;
+  margin-top: -90px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; /* ✅ make it wrap for mobile */
+  justify-content: space-around;
+  gap: 40px;
+}
+
+.footer-content {
+  flex: 1 1 250px; /* ✅ responsive block sizing */
+  min-width: 200px;
+}
+
+.footer-content h4,
+.footer-content h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #ffffff;
+}
+
+.footer-content p {
+  padding: 4px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-content ul li {
+  margin-bottom: 8px;
+}
+
+.footer-content ul li a {
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-content ul li a:hover {
+  color: #333;
+}
+
+.footer-content .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 40px;
+  color: #ffffff;
+  font-size: 16px;
+  
+}
+
+.footer-content .social-links a:hover {
+  background-color: #ffffff;
+  color: #ff6f61;
+}
+
+/* ✅ Mobile adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-content {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .footer-content ul li a {
+    font-size: 16px;
+  }
+
+  .footer-content .social-links {
+    justify-content: center;
+  }
+}
+
